@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta name="viewport" content="width=320; user-scalable=no" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Auth Demo</title>
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body onload="init()">
+	
+<div id="loginPage" data-role="page">
+
+	<div data-role="header">
+		<h1>Login</h1>
+	</div>
+
+	<div data-role="content">	
+
+		<form id="loginForm">
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Username" />
+		</div>
+
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" value="" placeholder="Password" />
+		</div>
+	
+
+		<input type="submit" value="Login" style="background-color:green" id="submitButton">
+		<a href=" "><p align="center">forget password?<p></a>
+		
+		
+		<input type="submit" value="Login with Facebook" style="background-color:blue"  id="submitButton">
+		<input type="submit" value="Login with Google" style="background-color:red" id="submitButton">
+		<style>
+
+				div.absolute {
+		  position:relative;
+		  top:5px;
+		 right:-50;
+		  width: 200px;
+		  height: 100px;
+		 
+		}
+		</style>
+		<div class="absolute"><a href=" ">Sign up</a></div>
+		</form>
+		
+	</div>
+
+	
+
+</div>
+
+<script>
+    $("#loginPage").live("pageinit", function(e) {
+		checkPreAuth();
+	});
+</script>
+
+</body>
+</html>
